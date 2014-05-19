@@ -1,0 +1,34 @@
+<VirtualHost *:80>
+    ServerName local.123tijdschrift.nl
+    DocumentRoot /var/www/public_html
+    SetEnv APPLICATION_ENV "vagrant"
+
+    <Directory /var/www/public_html>
+      allow from all
+      Options +Indexes
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/static-site-error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog ${APACHE_LOG_DIR}/static-site-access.log combined
+</VirtualHost>
+
+<VirtualHost *:443>
+     ServerName local.123tijdschrift.nl
+      DocumentRoot /var/www/public_html
+      SetEnv APPLICATION_ENV "vagrant"
+
+	   <Directory /var/www/public_html>
+           allow from all
+           Options +Indexes
+       </Directory>
+
+ 	 SSLEngine on
+     SSLCertificateFile /var/www/puppet/config/ssl/apache.crt
+	 SSLCertificateKeyFile /var/www/puppet/config/ssl/apache.key
+
+</VirtualHost>

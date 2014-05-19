@@ -1,0 +1,33 @@
+# PHP Storm
+.idea
+
+# Vagrant
+.vagrant
+
+#htpasswd file
+.htpasswd
+
+#Zend Studio Buildpath file
+.buildpath
+
+#Zend Studio project file
+.project
+
+#Zend Framework project file
+.zfproject.xml
+
+#server statistics folder
+/stats
+
+#server log folder
+/logs
+
+#public ftp folder
+/public_ftp
+
+
+#cache folders
+/public_html/cache
+
+#CGI Bin
+/cgi-bin
